@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Howdy</string>
+    <string name="need_a_new_account_signup">Need a New Account?SignUp!</string>
+    <string name="welome_to_howdy">Welome to Howdy!</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="logout">Logout</string>
+    <string name="login_to_your_account">Login to your account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="requests">Requests</string>
+    <string name="friends">Friends</string>
+    <string name="chats">Chats</string>
+    <string name="username">Username</string>
+    <string name="howdy_im_using_howdy">Howdy! Im using Howdy!</string>
+    <string name="change_image">change image</string>
+    <string name="change_status">change status</string>
 </resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "377897999047",
+    "firebase_url": "https://howdy-b1dfe.firebaseio.com",
+    "project_id": "howdy-b1dfe",
+    "storage_bucket": "howdy-b1dfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377897999047:android:0a4652edeb1cdd8d",
+        "android_client_info": {
+          "package_name": "com.example.asus.howdy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377897999047-h5ko42gfpj22sue8svfd7062scpp2kbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.asus.howdy",
+            "certificate_hash": "e449a62c0efd363e37838c92f29bc3325e826d42"
+          }
+        },
+        {
+          "client_id": "377897999047-f0ghgkde5s7d73sjs58pd21e2imi83lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgwHQxMKMjBHxIxVcsKIVBJEIJxrDwTBE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377897999047-f0ghgkde5s7d73sjs58pd21e2imi83lu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
