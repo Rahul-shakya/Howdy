@@ -11,6 +11,9 @@ import android.view.MenuItem;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
+    private DatabaseReference mUserRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+
+        if(mAuth.getCurrentUser() != null) {
+
+            mUserRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+        }
 
         mToolbar=(Toolbar)findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
@@ -55,6 +65,22 @@ public class MainActivity extends AppCompatActivity {
         if(currentUser==null)
         {
           sendToStart();
+
+        }else{
+
+            mUserRef.child("online").setValue("true");
+
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        FirebaseUser currentUser=mAuth.getCurrentUser();
+
+        if(currentUser != null) {
+            mUserRef.child("online").setValue(ServerValue.TIMESTAMP);
         }
     }
 
@@ -90,6 +116,14 @@ public class MainActivity extends AppCompatActivity {
 
              Intent settingsIntent=new Intent(MainActivity.this,SettingsActivity.class);
              startActivity(settingsIntent);
+
+
+        }
+
+        if(item.getItemId()==R.id.main_all_btn){
+
+            Intent settingsIntent=new Intent(MainActivity.this,UsersActivity.class);
+            startActivity(settingsIntent);
 
 
         }
